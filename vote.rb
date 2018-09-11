@@ -7,7 +7,7 @@ get '/' do
 end
 
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
+  @title = 'спасибо за голосование!'
   @vote  = params['vote']
   @store = YAML::Store.new 'votes.yml'
   @store.transaction do
