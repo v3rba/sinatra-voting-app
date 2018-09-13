@@ -8,7 +8,7 @@ class Vote < Sinatra::Base
   end
 
   post '/cast' do
-    @title = 'спасибо за голосование!'
+    @title = 'Спасибо за голосование!'
     @vote  = params['vote']
     @store = YAML::Store.new 'votes.yml'
     @store.transaction do
